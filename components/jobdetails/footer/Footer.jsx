@@ -1,12 +1,14 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-function ScreenHeaderBtn() {
+import styles from './footer.style'
+
+const Footer = () => {
   return (
     <View>
-        <Text>ScreenBtn</Text>
+      <Text>Footer</Text>
     </View>
   )
 }
 
-export default ScreenHeaderBtn
+export default Footer

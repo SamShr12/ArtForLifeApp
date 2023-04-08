@@ -1,12 +1,14 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-function Welcome() {
+import styles from './about.style'
+
+const About = () => {
   return (
     <View>
-        <Text>Welcome</Text>
+      <Text>About</Text>
     </View>
   )
 }
 
-export default Welcome
+export default About
