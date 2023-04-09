@@ -5,11 +5,12 @@ import styles from './popularjobs.style'
 import {COLORS, SIZES} from '../../../constants'
 import PopularJobCard from '../../common/cards/popular/PopularJobCard'
 import { useRouter } from 'expo-router'
+import useFetch from '../../../hook/useFetch'
 
-const Popularjobs = () => {
+const Popularjobs = ({artUrl}) => {
   const router = useRouter()
-  const [isLoading, setisLoading] = useState(false)
-  const error = false 
+  const {data, isLoading, error} = useFetch()
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -28,7 +29,8 @@ const Popularjobs = () => {
           <FlatList 
           data={[1,2,3,4]}
           renderItem={(item) => (
-            <PopularJobCard 
+            <PopularJobCard
+            artUrl = {artUrl} 
             item={item}
             />
           )}

@@ -1,13 +1,30 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity, Image } from 'react-native'
 
 import styles from './nearbyjobcard.style'
+import { checkImageUrl } from '../../../../utils'
 
-const NearbyJobCard = () => {
+// source = {{uri : checkImageUrl(item.image) ? item.image : "randomimage"}}
+
+const NearbyJobCard = ({el, handleNavigate, artUrl}) => {
   return (
-    <View>
-      <Text>NearbyJobCard</Text>
-    </View>
+    <TouchableOpacity style={styles.container}
+    onPress={handleNavigate}
+    >
+      <TouchableOpacity
+      style={styles.logoContainer}
+      >
+        <Image 
+        source={artUrl}
+        resizeMode='cover'
+        style={styles.artImage}
+        />
+        </TouchableOpacity>
+        <View style={styles.textContainer}>
+          <Text style={styles.jobName}>GodTier Art</Text>
+          <Text style={styles.jobType}>Get rekt</Text>
+        </View>
+    </TouchableOpacity>
   )
 }
 

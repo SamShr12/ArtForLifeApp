@@ -23,8 +23,8 @@ const Home = () => {
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={{padding:17}}>
                     <Welcome />
-                    <Popularjobs />
-                    <Nearbyjobs />
+                    <Popularjobs artUrl={images.profile} />
+                    <Nearbyjobs artUrl={images.profile} />
                 </View>
             </ScrollView>
         </SafeAreaView>
